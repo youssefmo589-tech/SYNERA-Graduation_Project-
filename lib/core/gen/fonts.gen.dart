@@ -9,6 +9,9 @@
 // ignore_for_file: deprecated_member_use,directives_ordering,implicit_dynamic_list_literal,unnecessary_import
 
 abstract final class FontFamily {
-  /// Font family: Zain
-  static const String zain = 'Zain';
+  /// Font family: Manrope
+  static const String manrope = 'Manrope';
+
+  /// Font family: Poopins
+  static const String poopins = 'Poopins';
 }

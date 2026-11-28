@@ -28,25 +28,27 @@ class TextFieldWidget extends StatelessWidget {
 
     return SizedBox(
       width: double.infinity,
-      height: 48,
+      // height: 48,
       child: TextFormField(
+        style: theme.titleMedium,
+        cursorColor: AppColors.white,
         validator: validator,
         autovalidateMode: AutovalidateMode.onUnfocus,
         controller: controller,
         decoration: InputDecoration(
           prefixIcon: prefixicon,
           suffixIcon: suffixicon,
-          contentPadding: EdgeInsets.symmetric(horizontal: 12, vertical: 12),
+          // contentPadding: EdgeInsets.symmetric(horizontal: 12, vertical: 12),
           hintText: title,
           hintStyle: theme.titleMedium,
-          enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(20),
-            borderSide: BorderSide(color: AppColors.white, width: 1.5),
-          ),
-          focusedBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(20),
-            borderSide: BorderSide(color: AppColors.white, width: 1.5),
-          ),
+          //   enabledBorder: OutlineInputBorder(
+          //     borderRadius: BorderRadius.circular(20),
+          //     borderSide: BorderSide(color: AppColors.white, width: 1.5),
+          //   ),
+          //   focusedBorder: OutlineInputBorder(
+          //     borderRadius: BorderRadius.circular(20),
+          //     borderSide: BorderSide(color: AppColors.white, width: 1.5),
+          //   ),
         ),
       ),
     );

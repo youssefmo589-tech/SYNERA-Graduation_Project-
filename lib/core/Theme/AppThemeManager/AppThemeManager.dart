@@ -5,23 +5,23 @@ import '../AppColors/AppColors.dart';
 class AppThemeManager {
 
   static ThemeData theme = ThemeData(
-      scaffoldBackgroundColor: AppColors.purple,
-      fontFamily: "Zain",
+      scaffoldBackgroundColor: AppColors.black,
+      fontFamily: "Manrope",
 
       textTheme: TextTheme(
         titleLarge: TextStyle(
           color: AppColors.white,
-          fontSize: 32,
-          fontWeight: FontWeight.w400,
+          fontSize: 26,
+          fontWeight: FontWeight.w700,
         ),
         titleMedium: TextStyle(
           color: AppColors.white,
-          fontSize: 18,
+          fontSize: 15,
           fontWeight: FontWeight.w400,
         ),
         titleSmall: TextStyle(
           color: AppColors.white,
-          fontSize: 12,
+          fontSize: 13,
           fontWeight: FontWeight.w400,
         ),
 
