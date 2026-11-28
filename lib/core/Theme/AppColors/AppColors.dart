@@ -18,4 +18,6 @@ class AppColors {
   static const Color lightgrey = Color(0xFFB1B9D8);
 
   static const Color bottombarbackground = Color(0xFF303650);
+
+  static const Color glass = Color(0xFF25283A);
 }

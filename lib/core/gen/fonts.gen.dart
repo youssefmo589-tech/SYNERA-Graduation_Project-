@@ -12,6 +12,6 @@ abstract final class FontFamily {
   /// Font family: Manrope
   static const String manrope = 'Manrope';
 
-  /// Font family: Poopins
-  static const String poopins = 'Poopins';
+  /// Font family: Poppins
+  static const String poppins = 'Poppins';
 }

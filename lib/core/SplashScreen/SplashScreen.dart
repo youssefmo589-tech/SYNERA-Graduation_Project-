@@ -65,7 +65,6 @@ class _SplashScreenState extends State<SplashScreen>
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
 
-
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     spacing: 7,

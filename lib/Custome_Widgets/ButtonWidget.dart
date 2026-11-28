@@ -19,14 +19,28 @@ class ButtonWidget extends StatelessWidget {
       width: 298,
       height: height,
       decoration: BoxDecoration(
-        color: AppColors.darkgrey,
-        borderRadius: islogin ? BorderRadiusGeometry.circular(26) : BorderRadius
-            .circular(10),
+        gradient: islogin
+            ? LinearGradient(
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          colors: [
+            AppColors.buttonColor,
+            AppColors.lightblue,
+          ],
+        )
+            : LinearGradient(
+          colors: [AppColors.buttonColor],
+        ),
+        borderRadius: BorderRadius.circular(islogin ? 26 : 10),
       ),
       child: Center(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 7),
-          child: Text(title, style: theme.titleLarge),
+        child: Text(
+          title,
+          style: const TextStyle(
+            color: AppColors.black,
+            fontWeight: FontWeight.w600,
+            fontSize: 15,
+          ),
         ),
       ),
     );

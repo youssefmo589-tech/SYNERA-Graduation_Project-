@@ -9,12 +9,15 @@ class TextFieldWidget extends StatelessWidget {
 
   final String? Function(String?)? validator;
 
-  final Icon? prefixicon;
+  final Widget? prefixicon;
 
-  final Icon? suffixicon;
+  final Widget? suffixicon;
+
+  final bool obscureText;
 
   const TextFieldWidget({
     super.key,
+    this.obscureText = false,
     required this.title,
     required this.controller,
     required this.validator,
@@ -28,27 +31,32 @@ class TextFieldWidget extends StatelessWidget {
 
     return SizedBox(
       width: double.infinity,
-      // height: 48,
       child: TextFormField(
-        style: theme.titleMedium,
+        obscureText: obscureText,
+        style: theme.titleMedium?.copyWith(color: AppColors.white),
         cursorColor: AppColors.white,
         validator: validator,
         autovalidateMode: AutovalidateMode.onUnfocus,
         controller: controller,
         decoration: InputDecoration(
           prefixIcon: prefixicon,
+            prefixIconConstraints: const BoxConstraints(
+              minWidth: 30,
+              minHeight: 30,
+            ),
           suffixIcon: suffixicon,
-          // contentPadding: EdgeInsets.symmetric(horizontal: 12, vertical: 12),
           hintText: title,
-          hintStyle: theme.titleMedium,
-          //   enabledBorder: OutlineInputBorder(
-          //     borderRadius: BorderRadius.circular(20),
-          //     borderSide: BorderSide(color: AppColors.white, width: 1.5),
-          //   ),
-          //   focusedBorder: OutlineInputBorder(
-          //     borderRadius: BorderRadius.circular(20),
-          //     borderSide: BorderSide(color: AppColors.white, width: 1.5),
-          //   ),
+            hintStyle: theme.titleMedium?.copyWith(color: AppColors.lightblue),
+            enabledBorder: UnderlineInputBorder(
+                borderSide: BorderSide(color: AppColors.lightgrey, width: 2)
+
+            ),
+            focusedBorder: UnderlineInputBorder(
+                borderSide: BorderSide(color: AppColors.lightgrey, width: 2)
+
+            )
+
+
         ),
       ),
     );
